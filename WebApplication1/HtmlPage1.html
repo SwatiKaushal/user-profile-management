@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hello</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .w3-quarter img {
+            margin-bottom: 40px;
+            cursor: pointer;
+        }
+
+            .w3-quarter img:hover {
+                opacity: 0.6;
+                transition: 0.3s;
+            }
+    </style>
+    <script src="JavaScript1.js"> </script>
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Filter</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-content" margin-top:83px">
+
+        <!-- Photo grid -->
+        <div id="profile" class="w3-row w3-grayscale-min">
+        </div> </div>
+</body>
+</html>
