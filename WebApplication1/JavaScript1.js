@@ -4,28 +4,32 @@ fetch(url)
 .then(function (data) {
     var i = 1; var k = 0;
     var parent = document.getElementById("profile");
-    while (i < 4) {
+    while (i < 2) {
         var j = k;
         var imageParent = document.createElement("div");
         imageParent.id = i;
-        while (j < (i*4)) {
+        while (j < (i*2)) {
             var image = document.createElement("img");
-            var textHolder = document.createElement("div");
+            var nameTextHolder = document.createElement("div");
+            var officeTextHolder = document.createElement("div");
             var container = document.createElement("div");
             container.class="container"
             image.id = j;
             image.style = "width:20%"
             image.className = "class";
             image.src = data[j].imagePortraitUrl;
-            textHolder.className = "bottom-left";
-            textHolder.innerHTML = data[j].name;
+            nameTextHolder.className = "bottom-left";
+            nameTextHolder.innerHTML = "Name- "+data[j].name;
+            officeTextHolder.className = "bottom-right";
+            officeTextHolder.innerHTML ="Office- "+ data[j].office;
             container.appendChild(image);
-            container.appendChild(textHolder);
+            container.appendChild(nameTextHolder);
+            container.appendChild(officeTextHolder);
             imageParent.appendChild(container);
+            parent.appendChild(imageParent);
             j++;
             k = j;
         }
-        parent.appendChild(imageParent);
             i++;
     }
 })
